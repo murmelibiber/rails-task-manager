@@ -1,0 +1,26 @@
+<h1>the index-page</h1>
+<h2>list of all tasks</h2>
+
+
+<%= @tasks.each do |task| %>
+<p>id: <%= task.id%>
+name: <%= task.name %>
+detail: <%= task.detail %></p>
+<%= link_to "More details on this task", task_path(task) %>
+<hr />
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
