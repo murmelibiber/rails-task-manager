@@ -1,8 +1,11 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    #@tasks = Task.all
+    @tasks = Task.order(created_at: :desc).all
     #PLURAL!!
+    #this is like sql to have it ordered the other way around that the newest one is on the top and
+    #not on the button!
   end
 
   def show
