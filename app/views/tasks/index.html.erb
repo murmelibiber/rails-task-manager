@@ -1,14 +1,17 @@
 <h1>the index-page</h1>
 <h2>list of all tasks</h2>
 
+<%= link_to "Create a new task", new_task_path %>
 
 <%= @tasks.each do |task| %>
 <p>id: <%= task.id%>
 name: <%= task.name %>
 detail: <%= task.detail %></p>
 <%= link_to "More details on this task", task_path(task) %>
+<%= link_to "destroy this one", task_path(task), method: :delete %>
 <hr />
 <% end %>
+
 
 
 
