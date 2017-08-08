@@ -1,7 +1,7 @@
 
 <h1>create a new task</h1>
 <%= form_for @task do |f| %>
-Task to do: <%= f.text_field :name %>
-Detail: <%= f.text_field :detail %>
+Task to do: <%= f.text_field :name, placeholder: 'type name' %>
+Detail: <%= f.text_field :detail, placeholder: 'type detail' %>
 <%= f.submit %>
 <% end %>
